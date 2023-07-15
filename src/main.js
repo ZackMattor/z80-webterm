@@ -7,7 +7,7 @@ let client_count = 0;
 
 const app = express();
 const server = app.listen(1337)
-app.use(express.static('public'))
+app.use(express.static('./src/frontend'))
 
 //let logStream = fs.createReadStream('log.txt')
 
