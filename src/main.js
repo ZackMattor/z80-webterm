@@ -1,6 +1,7 @@
 import { WebSocketServer, createWebSocketStream } from 'ws'
 import { spawn } from 'node:child_process'
 import express from 'express'
+import { ConsoleFilter } from './console_filter.js'
 //import fs from 'fs'
 
 let client_count = 0;
@@ -19,7 +20,8 @@ wss.on('connection', (ws) => {
   console.log('Someone Connected!')
   const client_stream = createWebSocketStream(ws, { encoding: 'utf8' });
 
-  client_stream.pipe(z80.stdin)
+  const consoleFilter = new ConsoleFilter()
+  client_stream.pipe(consoleFilter).pipe(z80.stdin)
   z80.stdout.pipe(client_stream)
 
   //client_stream.pip(logStream)
