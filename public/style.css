@@ -1,0 +1,89 @@
+body {
+  background-color: #111;
+  color: #eee;
+}
+
+#line_text, #bulk_text {
+  background-color: #444;
+  resize: none;
+  font-size: 15px;
+  width: 100%;
+  color: #eee;
+  font-family: monospace;
+}
+
+textarea {
+  height: 100px;
+}
+
+textarea:focus, input:focus {
+  outline: none !important;
+}
+
+.bulk-wrapper {
+  position: relative;
+}
+
+.wrapper {
+  border: 3px solid #eee;
+  width: 721px;
+  margin: 0 auto;
+}
+
+.xterm-screen {
+  border-bottom: 1px solid #ccc;
+  height: calc(100% - 160px)
+}
+
+.bulk-wrapper .button {
+  position: absolute;
+  border: 1px solid #999;
+  padding: 6px 11px;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+}
+
+.button {
+  font-family: monospace;
+  cursor: pointer;
+  text-align: center;
+  background-color: #333;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #444;
+}
+
+#status {
+  padding: 4px;
+  border-bottom: 1px solid #ccc;
+}
+
+#status .client-count {
+  display: hidden;
+  float: right;
+}
+
+#status.connecting {
+  background-color: #c38600;
+}
+
+#status.connected {
+  background-color: #005800;
+}
+
+#status.connected .client-count {
+  background-color: #005800;
+  display: inline-block;
+}
+
+#status.disconnected {
+  background-color: #8b1212;
+}
+
+#status.connected {
+  background-color: #005800;
+}

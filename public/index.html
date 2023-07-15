@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xterm-addon-attach@0.8.0/lib/xterm-addon-attach.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xterm@5.2.1/lib/xterm.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.slim.min.js" integrity="sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/xterm@5.2.1/css/xterm.min.css" rel="stylesheet">
+    <link href="./style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div id="status" class="connecting"><span class="status-content"></span><span class="client-count">Clients: 1</span></div>
+      <div id="terminal"></div>
+
+      <input placeholder="Enter Command..." id="line_text"></input>
+      <div class="bulk-wrapper">
+        <textarea placeholder="Bulk Command Entry..." id="bulk_text"></textarea>
+        <div class="button" id="submit_text">SEND BULK</div>
+      </div>
+    </div>
+    <script>
+    </script>
+  </body>
+</html>
