@@ -21,7 +21,7 @@ wss.on('connection', (ws) => {
   const client_stream = createWebSocketStream(ws, { encoding: 'utf8' });
 
   const consoleFilter = new ConsoleFilter()
-  client_stream.pipe(consoleFilter).pipe(z80.stdin)
+  client_stream.pipe(consoleFilter).pipe(z80.stdin, { end: false })
   z80.stdout.pipe(client_stream)
 
   //client_stream.pip(logStream)
